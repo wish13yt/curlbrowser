@@ -1,5 +1,4 @@
 @echo off
-echo DEBUG UPDATE
 echo Welcome to the Curl Web!
 echo Log is non-functional right now. Issues must be reported manually on the GitHub.
 echo Self-Serve pages may be broken, and are hosted via EchoCMD.
