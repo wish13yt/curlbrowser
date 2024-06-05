@@ -1,4 +1,5 @@
 @echo off
+echo DEBUG UPDATE
 echo Welcome to the Curl Web!
 echo Log is non-functional right now. Issues must be reported manually on the GitHub.
 echo Self-Serve pages may be broken, and are hosted via EchoCMD.
@@ -36,13 +37,7 @@ if "%site%" == "Crypto" (
 if "%site%" == "Browser Info" (
 FOR /F "usebackq tokens=3,4,5" %%i IN (`REG query "hklm\software\microsoft\windows NT\CurrentVersion" /v ProductName`) DO echo OS: %%i %%j %%k
 )
-id "%site%" == "Update" (
-echo Hey! Curl Browser will now update. DO NOT close Curl Browser during this, or you may risk Curl Browser being corrupted.
-set /p Path=cd
-bitsadmin.exe /transfer "Updating Curl Browser..." https://github.com/wish13yt/curlbrowser/blob/main/curlbrowser.bat %cd%
-pause
-echo Download completed. Curl Browser will close when you unpause.
-pause
-exit
+if "%site%" == "Update" (
+start updateassist.bat
 )
 pause
