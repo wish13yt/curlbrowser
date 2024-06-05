@@ -1,13 +1,16 @@
 @echo off
 echo Welcome to the Curl Web!
+echo Log is non-functional right now. Issues must be reported manually on the GitHub.
+echo Self-Serve pages may be broken, and are hosted via EchoCMD.
 echo WARNING! If you have paid for this software, you have been scammed. Curl Browser is open-source. Anyone may modify it.
 pause
 echo Sites:
 echo Parrot
 echo Shell Guide for Linux
 echo Weather
-echo Browsing Data
-echo Find your IP
+echo Crypto
+echo Browser Info (Self-Serve Page)
+echo Update
 pause
 echo Curl Browser may experience bugs. Please report any issues on the Itch.io page or GitHub.
 echo Some sites may open in a new window. Please check your taskbar before reporting any issues.
@@ -25,14 +28,21 @@ if "%site%" == "Weather" (
     echo Loading...
     curl wttr.in
 )
-if "%site%" == "Browsing Data" (
-    echo This data will not be shared. If you are recording, stop. This site will show your IP info.
-    pause
-    curl ipinfo.io
-    echo This info may not be accurate. That's a good thing.
-    pause
+if "%site%" == "Crypto" (
+    echo Curl Browser does not approve of Crypto or Bitcoin.    
+    start tnotice.txt
+    exit
+ )
+if "%site%" == "Browser Info" (
+FOR /F "usebackq tokens=3,4,5" %%i IN (`REG query "hklm\software\microsoft\windows NT\CurrentVersion" /v ProductName`) DO echo OS: %%i %%j %%k
 )
-if "%site%" == "Find your IP" (
-    echo If you are recording, STOP! This shows your Public IP (Sites recieve it). DO NOT SHARE THIS!
-    curl 4.icanhazip.com
+id "%site%" == "Update" (
+echo Hey! Curl Browser will now update. DO NOT close Curl Browser during this, or you may risk Curl Browser being corrupted.
+set /p Path=cd
+bitsadmin.exe /transfer "Updating Curl Browser..." https://github.com/wish13yt/curlbrowser/blob/main/curlbrowser.bat %cd%
+pause
+echo Download completed. Curl Browser will close when you unpause.
+pause
+exit
 )
+pause
