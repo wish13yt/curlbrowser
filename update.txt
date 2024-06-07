@@ -1,4 +1,4 @@
 [Update]
 Version=2.0
-URL=https://github.com/wish13yt/curlbrowser/blob/main/curlbrowser.exe
+URL=https://github.com/wish13yt/curlbrowser/blob/release/curlbrowser.exe
 
