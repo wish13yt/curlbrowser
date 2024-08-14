@@ -1,4 +1,4 @@
-            - name: Butler to Itch
+  - name: Butler to Itch
   # You may pin to the exact commit or the version.
   # uses: Ayowel/butler-to-itch@7b6338132fa31765869897ca9e40e6947dfe0f25
   uses: Ayowel/butler-to-itch@v1.0.0
