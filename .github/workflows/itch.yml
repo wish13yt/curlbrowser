@@ -1,31 +1,31 @@
   - name: Butler to Itch
-  # You may pin to the exact commit or the version.
-  # uses: Ayowel/butler-to-itch@7b6338132fa31765869897ca9e40e6947dfe0f25
+  
+  
   uses: Ayowel/butler-to-itch@v1.0.0
   with:
-    # What should be done with the action
-    action: # optional, default is push
-    # Where the SDK should be installed
-    install_dir: # optional
-    # Should the signature of the downloaded Butler executable be verified
-    check_signature: # optional, default is true
-    # Whether to update the PATH
-    update_path: # optional, default is false
-    # The butler version to install
-    butler_version: # optional, default is latest
-    # The butler key to use when uploading assets
+    
+    action: 
+    
+    install_dir: 
+    
+    check_signature: 
+    
+    update_path: 
+    
+    butler_version: 
+    
     butler_key: ${{ secrets.BUTLER }}
-    # The name of the user that publishes the games
+    
     itch_user: Wish13
-    # The name of the game to publish
+    
     itch_game: CurlBrowser
-    # Version number to release
-    version: # optional
-    # Paths to the files that should be pushed
+    
+    version: 
+    
     files:
   - curlbrowser.bat
   - curlbrowser.sh
   - curlbrowser.txt
-    # Whether to parse file names to create channels.
-    auto_channel: # optional, default is true
+    
+    auto_channel: 
           
