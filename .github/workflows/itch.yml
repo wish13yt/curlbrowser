@@ -22,7 +22,10 @@
     # Version number to release
     version: # optional
     # Paths to the files that should be pushed
-    files: # optional
+    files:
+  - curlbrowser.bat
+  - curlbrowser.sh
+  - curlbrowser.txt
     # Whether to parse file names to create channels.
     auto_channel: # optional, default is true
           
