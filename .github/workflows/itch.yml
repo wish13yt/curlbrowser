@@ -1,31 +1,17 @@
   - name: Butler to Itch
-  
-  
   uses: Ayowel/butler-to-itch@v1.0.0
-  with:
-    
-    action: 
-    
+  with:  
+    action:   
     install_dir: 
-    
     check_signature: 
-    
     update_path: 
-    
-    butler_version: 
-    
-    butler_key: ${{ secrets.BUTLER }}
-    
+    butler_version:  
+    butler_key: ${{ secrets.BUTLER }} 
     itch_user: Wish13
-    
-    itch_game: CurlBrowser
-    
-    version: 
-    
+    itch_game: CurlBrowser 
+    version:  
     files:
   - curlbrowser.bat
   - curlbrowser.sh
-  - curlbrowser.txt
-    
-    auto_channel: 
-          
+  - curlbrowser.txt 
+    auto_channel:     
