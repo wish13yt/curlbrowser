@@ -11,7 +11,7 @@
     itch_game: CurlBrowser 
     version:  
     files:
-  - curlbrowser.bat
-  - curlbrowser.sh
-  - curlbrowser.txt 
+    curlbrowser.bat
+    curlbrowser.sh
+    curlbrowser.txt
     auto_channel:     
